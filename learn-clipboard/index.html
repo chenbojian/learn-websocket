@@ -1,0 +1,54 @@
+<!-- start with npx http-server -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('test', () => ({
+                items: [],
+                view: 'text',
+
+                toggleView() {
+                    this.view = this.view === 'text' ? 'html' : 'text';
+                },
+    
+                async toggle() {
+                    this.items = []
+                    const clipboardItems = await navigator.clipboard.read();
+
+                    for (const clipboardItem of clipboardItems) {
+                        for (const type of clipboardItem.types) {
+                            const blob = await clipboardItem.getType(type)
+                            this.items.push([type, await blob.text()])
+                            console.log(await blob.text())
+                        }
+                    }
+                }
+            }))
+        })
+    </script>
+</head>
+<body>
+    <div x-data="test" x-init="toggle()">
+        <button x-text="view" @click="toggleView()"></button>
+        <span x-text="items.length"></span>
+        <template x-for="item in items">
+            <div>
+                <h1 x-text="item[0]"></h1>
+                <template x-if="view === 'html'">
+                    <div x-html="item[1]"></div>
+                </template>
+                <template x-if="view === 'text'">
+                    <div x-text="item[1]"></div>
+                </template>
+                <br>
+            </div>
+        </template>
+    
+    </div>
+</body>
+</html>
