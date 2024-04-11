@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchVisual", "ArchVisual\ArchVisual.csproj", "{F347B23F-F81C-409D-B539-46E14E1C87F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection", "Reflection\Reflection.csproj", "{C4A5E0A9-EA3B-4F9F-881F-40F9B588B88C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection.Test", "Reflection.Test\Reflection.Test.csproj", "{0E34DE2D-5DF0-4EAA-AB8D-82AF601B4BF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{F347B23F-F81C-409D-B539-46E14E1C87F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F347B23F-F81C-409D-B539-46E14E1C87F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F347B23F-F81C-409D-B539-46E14E1C87F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A5E0A9-EA3B-4F9F-881F-40F9B588B88C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A5E0A9-EA3B-4F9F-881F-40F9B588B88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A5E0A9-EA3B-4F9F-881F-40F9B588B88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A5E0A9-EA3B-4F9F-881F-40F9B588B88C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E34DE2D-5DF0-4EAA-AB8D-82AF601B4BF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E34DE2D-5DF0-4EAA-AB8D-82AF601B4BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E34DE2D-5DF0-4EAA-AB8D-82AF601B4BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E34DE2D-5DF0-4EAA-AB8D-82AF601B4BF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
